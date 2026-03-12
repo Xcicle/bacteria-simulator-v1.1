@@ -8,7 +8,12 @@ class Visualizer:
 
         # Read population data
         with open("population.txt", "r") as file:
-            populations = [int(line.strip()) for line in file if line.strip()]
+            populations = []
+
+            for line in file:
+                line = line.strip()
+                if line:
+                    populations.append(int(line))
 
         # Get last 20 days
         last_pop = populations[-20:]

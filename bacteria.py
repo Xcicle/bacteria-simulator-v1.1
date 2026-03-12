@@ -58,6 +58,7 @@ class Bacteria:
         # -------------------- # NUTRIENTS EFFECT # -------------------- #
 
         nutrients = env.nutrients
+
         if nutrients >= 7:
             birth_modifier *= 1.2
         elif 3 <= nutrients < 7:
